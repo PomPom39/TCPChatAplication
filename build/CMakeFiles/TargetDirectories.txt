@@ -1,0 +1,4 @@
+/home/mahesh/Desktop/git_projects/Chat Application/build/CMakeFiles/edit_cache.dir
+/home/mahesh/Desktop/git_projects/Chat Application/build/CMakeFiles/rebuild_cache.dir
+/home/mahesh/Desktop/git_projects/Chat Application/build/CMakeFiles/mainApp.dir
+/home/mahesh/Desktop/git_projects/Chat Application/build/CMakeFiles/netconf.dir

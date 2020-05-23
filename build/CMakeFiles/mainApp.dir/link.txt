@@ -1,0 +1,1 @@
+/usr/bin/cc  -O0   CMakeFiles/mainApp.dir/src/mainApp.c.o  -o mainApp libnetconf.a 

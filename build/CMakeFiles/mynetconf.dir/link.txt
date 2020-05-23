@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmynetconf.a  CMakeFiles/mynetconf.dir/libs/netconf.c.o
+/usr/bin/ranlib libmynetconf.a

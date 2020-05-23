@@ -1,0 +1,1 @@
+/usr/bin/cc  -O0   CMakeFiles/nmainApp.dir/src/mainApp.c.o  -o nmainApp 

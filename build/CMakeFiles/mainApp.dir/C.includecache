@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mahesh/Desktop/git_projects/Chat Application/libs/netconf.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+arpa/inet.h
+-
+sys/socket.h
+-
+errno.h
+-
+unistd.h
+-
+string.h
+-
+
+/home/mahesh/Desktop/git_projects/Chat Application/src/mainApp.c
+stdio.h
+-
+stdlib.h
+-
+../libs/netconf.h
+/home/mahesh/Desktop/git_projects/Chat Application/libs/netconf.h
+

@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mahesh/Desktop/git_projects/Chat Application/src/netconf.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+arpa/inet.h
+-
+sys/socket.h
+-
+errno.h
+-
+unistd.h
+-
+string.h
+-
+
+/home/mahesh/Desktop/git_projects/Chat Application/src/stdin2ethernet.c
+stdio.h
+-
+pthread.h
+-
+unistd.h
+-
+string.h
+-
+stdlib.h
+-
+

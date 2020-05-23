@@ -1,0 +1,1 @@
+/usr/bin/cc  -O0   CMakeFiles/stdin2ethernet.dir/src/netconf.c.o CMakeFiles/stdin2ethernet.dir/src/stdin2ethernet.c.o  -o stdin2ethernet -lpthread 
