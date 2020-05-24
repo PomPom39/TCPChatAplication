@@ -31,4 +31,6 @@ stdlib.h
 -
 ../libs/netconf.h
 /home/mahesh/Desktop/git_projects/Chat Application/libs/netconf.h
+pthread.h
+-
 

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5.1)
-project(stdin2ethernet)
+project(UDPServerClientChat)
 
 #Header directory
 include_directories(include)
@@ -26,4 +26,4 @@ set(CMAKE_C_FLAGS "-O0")
 
 add_executable(mainApp ${SOURCES})
 #add_executable(stdin2ethernet ${SOURCES})
-TARGET_LINK_LIBRARIES(mainApp netconf)
+TARGET_LINK_LIBRARIES(mainApp netconf pthread)
