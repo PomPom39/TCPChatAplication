@@ -35,4 +35,8 @@ pthread.h
 -
 string.h
 -
+signal.h
+-
+string.h
+-
 

@@ -1,7 +1,7 @@
 #ifndef _NETCONF_H_
 #define _NETCONF_H_
 
-#define DEBUG
+//#define DEBUG
 
 
 #include <stdio.h>
@@ -32,14 +32,16 @@ typedef struct netconf {
 	struct sockaddr_in servAddr;
 	struct sockaddr_in cliAddr;
 	int port;
+	char *ip;
 
 }netconf_t;
 
 
 
-extern void netInit(struct netconf *servObj, int debug);
+extern void netInit(struct netconf *servObj);
 extern void netBind(struct netconf *servObj);
 extern void netListen(struct netconf *servObj);
+extern void netConnect(struct netconf *servObj);
 
 
 

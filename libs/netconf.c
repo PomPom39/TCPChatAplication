@@ -2,10 +2,8 @@
 #include "netconf.h"
 
 
-void netInit(struct netconf *servObj, int debug) {
+void netInit(struct netconf *servObj) {
 
-	printf("\n Value of debug = %d", debug);
-	dbgprint(("Inside netInit"));
 	dbgprint(("Server PORT = %d", servObj->port));
 	
 	int retVal;
@@ -19,7 +17,7 @@ void netInit(struct netconf *servObj, int debug) {
 		perror("\n Creation of socket failed");
 		exit(EXIT_FAILURE);
 	}
-	dbgprint(("Server socket created succesfully..."));
+	dbgprint(("Socket created succesfully..."));
 	
 	//Initializing the server and client sockaddr structures
 	memset(&servObj->servAddr, 0, sizeof(servObj->servAddr));
@@ -28,7 +26,7 @@ void netInit(struct netconf *servObj, int debug) {
 	
 	//Filling the server information
 	servObj->servAddr.sin_family	= AF_INET; //IPv4 Protocol
-	servObj->servAddr.sin_addr.s_addr = htonl(INADDR_ANY);
+	servObj->servAddr.sin_addr.s_addr = inet_addr(servObj->ip);
 	servObj->servAddr.sin_port = htons(servObj->port);
 
 }
@@ -58,6 +56,15 @@ void netAccept(struct netconf *servObj) {
 	if ((servObj->connfd = accept(servObj->sockfd, (struct sockaddr *)&servObj->cliAddr, &cliSize)) < 0) {
 		perror("\n Server accept failed");
 	}
+}
+
+void netConnect (struct netconf *servObj) {
+
+		if (connect(servObj->sockfd, (const struct sockaddr *)&servObj->servAddr, sizeof(servObj->servAddr)) != 0) { 
+        perror("\n Connection with the server failed...\n"); 
+        exit(0); 
+    } 
+
 }
 	#if 0
 
