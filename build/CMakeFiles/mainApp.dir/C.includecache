@@ -6,22 +6,24 @@
 
 #IncludeRegexTransform: 
 
-/home/mahesh/Desktop/git_projects/Chat Application/libs/netconf.h
-stdio.h
--
-stdlib.h
--
-string.h
--
+../include/s2e_ess.c
+s2e_ess.h
+../include/s2e_ess.h
+
+../include/s2e_ess.h
 arpa/inet.h
 -
 sys/socket.h
 -
-errno.h
--
-unistd.h
--
 string.h
+-
+stdio.h
+-
+fcntl.h
+-
+termios.h
+-
+sys/ioctl.h
 -
 
 /home/mahesh/Desktop/git_projects/Chat Application/src/mainApp.c
@@ -29,8 +31,6 @@ stdio.h
 -
 stdlib.h
 -
-../libs/netconf.h
-/home/mahesh/Desktop/git_projects/Chat Application/libs/netconf.h
 pthread.h
 -
 string.h
@@ -38,5 +38,9 @@ string.h
 signal.h
 -
 string.h
+-
+s2e_ess.c
+/home/mahesh/Desktop/git_projects/Chat Application/src/s2e_ess.c
+getopt.h
 -
 

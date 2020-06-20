@@ -90,7 +90,6 @@ mainApp_EXTERNAL_OBJECTS =
 
 mainApp: CMakeFiles/mainApp.dir/src/mainApp.c.o
 mainApp: CMakeFiles/mainApp.dir/build.make
-mainApp: libnetconf.a
 mainApp: CMakeFiles/mainApp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/mahesh/Desktop/git_projects/Chat Application/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable mainApp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mainApp.dir/link.txt --verbose=$(VERBOSE)

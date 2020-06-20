@@ -16,6 +16,7 @@ add_library(netconf ${LIB_SOURCES} ${LIB_HEADERS} )
 
 #manually adding sources
 set(SOURCES src/mainApp.c)
+set(GUISOURCES src/ncgui.c)
 set(CMAKE_C_FLAGS "-O0")
 #add_compile_options("-lpthread")
 
@@ -25,5 +26,7 @@ set(CMAKE_C_FLAGS "-O0")
 #file(GLOB SOURCES "src/*.c")
 
 add_executable(mainApp ${SOURCES})
+add_executable(gui ${GUISOURCES})
 #add_executable(stdin2ethernet ${SOURCES})
-TARGET_LINK_LIBRARIES(mainApp netconf pthread)
+TARGET_LINK_LIBRARIES(mainApp pthread ncurses)
+TARGET_LINK_LIBRARIES(gui pthread ncurses)

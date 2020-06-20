@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named netconf
+
+# Build rule for target.
+netconf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 netconf
+.PHONY : netconf
+
+# fast build rule for target.
+netconf/fast:
+	$(MAKE) -f CMakeFiles/netconf.dir/build.make CMakeFiles/netconf.dir/build
+.PHONY : netconf/fast
+
+#=============================================================================
 # Target rules for targets named mainApp
 
 # Build rule for target.
@@ -124,17 +137,17 @@ mainApp/fast:
 .PHONY : mainApp/fast
 
 #=============================================================================
-# Target rules for targets named netconf
+# Target rules for targets named gui
 
 # Build rule for target.
-netconf: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 netconf
-.PHONY : netconf
+gui: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gui
+.PHONY : gui
 
 # fast build rule for target.
-netconf/fast:
-	$(MAKE) -f CMakeFiles/netconf.dir/build.make CMakeFiles/netconf.dir/build
-.PHONY : netconf/fast
+gui/fast:
+	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/build
+.PHONY : gui/fast
 
 libs/netconf.o: libs/netconf.c.o
 
@@ -190,6 +203,33 @@ src/mainApp.c.s:
 	$(MAKE) -f CMakeFiles/mainApp.dir/build.make CMakeFiles/mainApp.dir/src/mainApp.c.s
 .PHONY : src/mainApp.c.s
 
+src/ncgui.o: src/ncgui.c.o
+
+.PHONY : src/ncgui.o
+
+# target to build an object file
+src/ncgui.c.o:
+	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/ncgui.c.o
+.PHONY : src/ncgui.c.o
+
+src/ncgui.i: src/ncgui.c.i
+
+.PHONY : src/ncgui.i
+
+# target to preprocess a source file
+src/ncgui.c.i:
+	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/ncgui.c.i
+.PHONY : src/ncgui.c.i
+
+src/ncgui.s: src/ncgui.c.s
+
+.PHONY : src/ncgui.s
+
+# target to generate assembly for a file
+src/ncgui.c.s:
+	$(MAKE) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/src/ncgui.c.s
+.PHONY : src/ncgui.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -197,15 +237,19 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... netconf"
 	@echo "... rebuild_cache"
 	@echo "... mainApp"
-	@echo "... netconf"
+	@echo "... gui"
 	@echo "... libs/netconf.o"
 	@echo "... libs/netconf.i"
 	@echo "... libs/netconf.s"
 	@echo "... src/mainApp.o"
 	@echo "... src/mainApp.i"
 	@echo "... src/mainApp.s"
+	@echo "... src/ncgui.o"
+	@echo "... src/ncgui.i"
+	@echo "... src/ncgui.s"
 .PHONY : help
 
 
